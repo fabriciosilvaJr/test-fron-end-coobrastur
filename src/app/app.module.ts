@@ -7,6 +7,7 @@ import { ClienteListComponent } from './components/clientes/cliente-list/cliente
 import { ClienteFormComponent } from './components/clientes/cliente-form/cliente-form.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/layout/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './components/layout/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
