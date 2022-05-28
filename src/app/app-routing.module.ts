@@ -1,13 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ClienteFormComponent } from './pages/clientes/cliente-form/cliente-form.component';
-import { ClienteListComponent } from './pages/clientes/cliente-list/cliente-list.component';
+import { ClienteFormComponent } from './components/clientes/cliente-form/cliente-form.component';
+import { ClienteListComponent } from './components/clientes/cliente-list/cliente-list.component';
+import { HomeComponent } from './components/layout/home/home.component';
 
 
 const routes: Routes = [
-  {path:"clientes", component: ClienteListComponent},
-  {path:"clientes/new", component:ClienteFormComponent},
-  {path: 'clientes/:id/edit', component: ClienteFormComponent},
+  {
+    path:'' , 
+    component: HomeComponent,
+    children: [
+      {path:"clientes", component: ClienteListComponent},
+      {path:"clientes/new", component:ClienteFormComponent},
+      {path: 'clientes/:id/edit', component: ClienteFormComponent},
+
+    ]
+  }
+ 
 
 ];
 

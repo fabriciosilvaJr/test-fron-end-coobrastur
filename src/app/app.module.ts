@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClienteListComponent } from './pages/clientes/cliente-list/cliente-list.component';
-import { ClienteFormComponent } from './pages/clientes/cliente-form/cliente-form.component';
+import { ClienteListComponent } from './components/clientes/cliente-list/cliente-list.component';
+import { ClienteFormComponent } from './components/clientes/cliente-form/cliente-form.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/layout/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteListComponent,
-    ClienteFormComponent
+    ClienteFormComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
