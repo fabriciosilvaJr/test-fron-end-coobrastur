@@ -1,1 +1,29 @@
-<p>cliente-form works!</p>
+<div class="container">
+  
+    <h1 class="titulo">Painel de Clientes</h1>
+    <div  class="header_form mt-4">
+        <h2 >Novo Cliente</h2>
+        <p>Informe os campos a seguir para cadastrar um novo cliente:</p>
+    </div>
+
+    <form style="width: 40%;" action="/pagina-processa-dados-do-form" method="post">
+        <div >
+            <label for="nome">Nome:</label>
+            <input class="form-control" type="text" id="nome" />
+        </div>
+        <div>
+            <label for="profissao">Profissão:</label>
+            <input class="form-control" type="profissao" id="email" />
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-3">
+              <button  class="stretched-link">Cadastrar</button>
+            </div>
+            <div class="col-3">
+              <button  routerLink="/clientes" class="stretched-link">Voltar</button>
+            </div>
+          </div>
+   
+    </form>
+</div>
