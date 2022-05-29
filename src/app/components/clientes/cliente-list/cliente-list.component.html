@@ -3,13 +3,13 @@
     <h1 class="titulo">Painel de Clientes</h1>
   
 
-  <div class="table-responsive">
+  <div class="table-responsive" >
     <table class="table " >
   
       <tbody>
         <tr *ngFor="let cliente of clientes" >
           <td > <img [attr.src]="cliente.avatar" alt="profile" ></td>
-          <td>{{cliente.first_name}}</td>
+          <td>{{cliente.first_name}} {{cliente.last_name}}</td>
           <td>{{cliente.email}}
           </td>
           <td><button class="btnEditar">Editar</button></td>
