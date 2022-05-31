@@ -6,14 +6,14 @@
         <p>Informe os campos a seguir para cadastrar um novo cliente:</p>
     </div>
 
-    <form style="width: 40%;" action="/pagina-processa-dados-do-form" method="post">
+    <form  [formGroup]="clienteForm" (submit)="submitForm()" style="width: 40%;" action="/pagina-processa-dados-do-form" method="post">
         <div >
             <label for="nome">Nome:</label>
-            <input class="form-control" type="text" id="nome" />
+            <input class="form-control" type="text" id="nome" formControlName="name" />
         </div>
         <div>
             <label for="profissao">Profissão:</label>
-            <input class="form-control" type="profissao" id="email" />
+            <input class="form-control" type="profissao" id="email" formControlName="job" />
         </div>
 
         <div class="row mt-4">

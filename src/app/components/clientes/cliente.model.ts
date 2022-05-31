@@ -5,6 +5,8 @@ export class Cliente {
         public email?: string,
         public first_name?: string,
         public last_name?: string,
+        public name?: string,
+        public job?: string,
         public avatar?: string,
       
     ){}

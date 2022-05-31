@@ -15,6 +15,12 @@ export class ClienteService {
 
   }
 
+  create(usuario: any){
+    return this.http.post(`https://reqres.in/api/users`, usuario)
+
+  }
+
+
     //Private Methods
 
     private jsonDataToClientes(jsonData: any[]): Cliente[]{

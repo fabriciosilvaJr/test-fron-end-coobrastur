@@ -8,6 +8,7 @@ import { ClienteFormComponent } from './components/clientes/cliente-form/cliente
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/layout/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
