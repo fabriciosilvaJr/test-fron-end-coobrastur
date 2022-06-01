@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/layout/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ClienteFormEditComponent } from './components/clientes/cliente-form-edit/cliente-form-edit.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ClienteListComponent,
     ClienteFormComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ClienteFormEditComponent
   ],
   imports: [
     BrowserModule,

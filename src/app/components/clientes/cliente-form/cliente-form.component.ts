@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 import { Cliente } from '../cliente.model';
 import { ClienteService } from '../cliente.service';
 
@@ -16,6 +18,8 @@ export class ClienteFormComponent implements OnInit {
 
   constructor(
     private clienteService: ClienteService,
+    private route: ActivatedRoute,
+    private router: Router,
     private formBuilder: FormBuilder
     ) { }
 
@@ -38,6 +42,24 @@ export class ClienteFormComponent implements OnInit {
       job: [null],
     
     });
+  }
+
+  private loadCliente(){
+
+
+      this.route.paramMap.pipe(
+        switchMap(params => this.clienteService.getById(+params.get("id")))
+      )
+      .subscribe(
+        (cliente) => {
+          this.cliente = cliente;
+          this.clienteForm.patchValue(cliente) // binds loaded contato data to ContatoForm
+        
+        },
+        error => alert('Ocorreu um erro no servidor, tente mais tarde.')
+      )
+
+    
   }
 
   private createCliente(){
