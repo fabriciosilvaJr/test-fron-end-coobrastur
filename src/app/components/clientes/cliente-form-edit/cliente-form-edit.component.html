@@ -1,29 +1,38 @@
 <div class="container">
-  
-    <h1 class="titulo">Painel de Clientes</h1>
-    <div  class="header_form mt-4">
-        <h2 >Editar Cliente</h2>
-        <!-- <p>Informe os campos a seguir para cadastrar um novo cliente:</p> -->
+
+  <h1 class="titulo">Painel de Clientes</h1>
+  <div class="header_form mt-4">
+    <h2>Editar Cliente</h2>
+  </div>
+
+  <form [formGroup]="clienteFormEdt" (submit)="submitForm()" style="width: 40%;" method="post">
+    <div>
+      <label class="hoverable" for="fileInput">
+        <img [src]="url ? url :cliente.avatar"> 
+        <div class="hover-text">Choose file</div>
+        <div class="background"></div>
+      </label>
+      <br/>
+      <input id="fileInput" type='file' (change)="onSelectFile($event)">
+     
+    </div>
+    <div>
+      <label for="nome">Nome:</label>
+      <input class="form-control" type="text" id="nome" formControlName="first_name" />
+    </div>
+    <div>
+      <label for="email">E-mail:</label>
+      <input class="form-control" type="email" id="email" formControlName="email" />
     </div>
 
-    <form  [formGroup]="clienteFormEdt" (submit)="submitForm()" style="width: 40%;"  method="post">
-        <div >
-            <label for="nome">Nome:</label>
-            <input class="form-control" type="text" id="nome" formControlName="first_name" />
-        </div>
-        <div>
-            <label for="email">E-mail:</label>
-            <input class="form-control" type="email" id="email" formControlName="email" />
-        </div>
+    <div class="row mt-4">
+      <div class="col-3 ">
+        <button class="btn_cadastrar">Salvar</button>
+      </div>
+      <div class="col-3 ml-5">
+        <button class="btn_voltar" routerLink="/clientes">Voltar</button>
+      </div>
+    </div>
 
-        <div class="row mt-4">
-            <div class="col-3 ">
-              <button  class="btn_cadastrar">Salvar</button>
-            </div>
-            <div class="col-3 ml-5">
-              <button class="btn_voltar" routerLink="/clientes" >Voltar</button>
-            </div>
-          </div>
-   
-    </form>
+  </form>
 </div>
