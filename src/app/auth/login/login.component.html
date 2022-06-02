@@ -1,0 +1,31 @@
+<div class="account section mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="login-form border p-5">
+                    <div class="text-center heading">
+                        <h2 class="mb-2"> <img  src="assets/logo.png" alt="coob_logo" ></h2>
+
+                    </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group mb-4">
+                            <label for="usuario">E-mail</label>
+                            <input type="email" name="usuario" class="form-control" formControlName="usuario"
+                              >
+                        </div>
+                        <div class="form-group">
+                            <label for="Senha">Senha</label>
+                            <!-- <a class="float-right" href="">Forget password?</a> -->
+                            <input type="password" name="senha" formControlName="senha" class="form-control"
+                              >
+                        </div>
+                        <button type="submit" class="btn btn-main btn-block mt-4">Acessar o Sistema</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

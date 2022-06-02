@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { ClienteListComponent } from './components/clientes/cliente-list/cliente-list.component';
 import { ClienteFormComponent } from './components/clientes/cliente-form/cliente-form.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './components/layout/home/home.component';
+import { HomeComponent } from './layout/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClienteFormEditComponent } from './components/clientes/cliente-form-edit/cliente-form-edit.component';
+import { LoginComponent } from './auth/login/login.component';
+import { AuthenticationComponent } from './layout/authentication/authentication.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,15 @@ import { ClienteFormEditComponent } from './components/clientes/cliente-form-edi
     ClienteFormComponent,
     HeaderComponent,
     HomeComponent,
-    ClienteFormEditComponent
+    ClienteFormEditComponent,
+    LoginComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
