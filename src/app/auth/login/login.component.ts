@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
     this.submittingForm = false;
   
     if(error.status === 400)
-      alert("Usuário ou senha invalida");
+      alert("Missing password");
   
   
   }

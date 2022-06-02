@@ -27,4 +27,11 @@ export class AccountService {
       })
     )
   }
+
+  logout(){
+    localStorage.removeItem('token');
+    window.location.reload();
+    this.subjLoggedIn$.next(false);
+    this.subjUsuario$.next(null);
+  }
 }

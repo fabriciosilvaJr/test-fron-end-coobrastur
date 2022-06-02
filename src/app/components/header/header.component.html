@@ -2,7 +2,11 @@
 
    <img class="logo"  src="assets/logo_coob_web_prata.png" alt="coob_logo" >
     
-   <button *ngIf="router.url === '/clientes'" class="btn" routerLink="clientes/new">+ Novo Cliente</button>
+   <button *ngIf="router.url === '/clientes'" class="btn_new" routerLink="clientes/new">+ Novo Cliente</button>
+
+   <a style="color: #FFFFFF;" (click)="logout()"  class="a_logout">
+    <img class="mr-2" src="assets/Vector.png"  > Sair
+   </a>
 
     
 </div>
