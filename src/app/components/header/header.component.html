@@ -1,12 +1,24 @@
+
 <div class="header">
 
-   <img class="logo"  src="assets/logo_coob_web_prata.png" alt="coob_logo" >
-    
-   <button *ngIf="router.url === '/clientes'" class="btn_new" routerLink="clientes/new">+ Novo Cliente</button>
+   <div class="row ">
 
-   <a style="color: #FFFFFF;" (click)="logout()"  class="a_logout">
-    <img class="mr-2" src="assets/Vector.png"  > Sair
-   </a>
+
+   
+      <img  class="img-fluid logo "  src="assets/logo_coob_web_prata.png" alt="coob_logo" >
+    
+       <div class="phone"> 
+         <button *ngIf="router.url === '/clientes'" class="btn_new" routerLink="clientes/new">+ Novo Cliente</button>
+   
+         <a style="color: #FFFFFF;" (click)="logout()"  class="a_logout">
+          <img class="img-responsive mr-2" src="assets/Vector.png"  > Sair
+         </a>
+
+       </div>
+      
+   </div>
+
+
 
     
 </div>
