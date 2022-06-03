@@ -6,6 +6,10 @@
         <p>Informe os campos a seguir para cadastrar um novo cliente:</p>
     </div>
 
+    <div class="formulario">
+
+    </div>
+
     <form  [formGroup]="clienteForm" (submit)="submitForm()" style="width: 40%;" action="/pagina-processa-dados-do-form" method="post">
         <div >
             <label for="nome">Nome:</label>
@@ -17,7 +21,7 @@
         </div>
 
         <div class="row mt-4">
-            <div class="col-md-3 mr-5">
+            <div class="col-md-3 mr-4">
               <button  class="btn_cadastrar">Cadastrar</button>
             </div>
             <div class="col-md-3 ml-5">
