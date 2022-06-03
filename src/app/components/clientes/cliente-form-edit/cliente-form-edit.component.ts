@@ -24,7 +24,7 @@ export class ClienteFormEditComponent implements OnInit {
 
   ) { }
 
-  url:any = '';
+  url: any = '';
   onSelectFile(event) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
@@ -41,15 +41,15 @@ export class ClienteFormEditComponent implements OnInit {
     this.buildClienteFormEdt()
     this.loadCliente()
   }
-  submitForm(){
+  submitForm() {
     this.submittingForm = true;
-   
-  
 
-   
+
+
+
   }
 
-  private buildClienteFormEdt(){
+  private buildClienteFormEdt() {
 
     this.clienteFormEdt = this.formBuilder.group({
       id: [null],
@@ -57,26 +57,26 @@ export class ClienteFormEditComponent implements OnInit {
       last_name: [null],
       email: [null],
       avatar: [null],
-    
+
     });
   }
 
-  private loadCliente(){
+  private loadCliente() {
 
 
     this.route.paramMap.pipe(
       switchMap(params => this.clienteService.getById(+params.get("id")))
     )
-    .subscribe(
-      (cliente:any) => {
-        this.cliente = cliente.data;
-        this.clienteFormEdt.patchValue(cliente.data) // binds loaded contato data to ContatoForm
-      
-      },
-      error => alert('Ocorreu um erro no servidor, tente mais tarde.')
-    )
+      .subscribe(
+        (cliente: any) => {
+          this.cliente = cliente.data;
+          this.clienteFormEdt.patchValue(cliente.data) // binds loaded contato data to ContatoForm
 
-  
-}
+        },
+        error => alert('Ocorreu um erro no servidor, tente mais tarde.')
+      )
+
+
+  }
 
 }

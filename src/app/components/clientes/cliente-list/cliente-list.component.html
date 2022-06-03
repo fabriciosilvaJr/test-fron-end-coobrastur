@@ -1,27 +1,24 @@
 <div class="container">
-  
-    <h1 class="titulo"> Painel de Clientes</h1>
-  
 
-  <div class="table-responsive" >
+  <h1 class="titulo"> Painel de Clientes</h1>
+
+
+  <div class="table-responsive">
     <table class="table " style="width: 80%">
-  
+
       <tbody>
-        <tr *ngFor="let cliente of clientes" >
-          <td > <img [attr.src]="cliente.avatar" alt="profile" ></td>
-          <td  >{{cliente.first_name}} {{cliente.last_name}}</td>
-          <td  >{{cliente.email}}
+        <tr *ngFor="let cliente of clientes">
+          <td> <img [attr.src]="cliente.avatar" alt="profile"></td>
+          <td>{{cliente.first_name}} {{cliente.last_name}}</td>
+          <td>{{cliente.email}}
           </td>
-          <td class="phone"><button [routerLink]="[cliente.id,'edit']"  class="btnEditar">Editar</button></td>
+          <td class="phone"><button [routerLink]="[cliente.id,'edit']" class="btnEditar">Editar</button></td>
         </tr>
 
-    
-  
+
+
       </tbody>
     </table>
 
   </div>
 </div>
-
-
-

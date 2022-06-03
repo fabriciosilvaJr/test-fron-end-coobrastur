@@ -21,57 +21,41 @@ export class ClienteFormComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private formBuilder: FormBuilder
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.buildClienteForm();
   }
 
-  submitForm(){
+  submitForm() {
     this.submittingForm = true;
-   
-   
-      this.createCliente()
 
-   
+
+    this.createCliente()
+
+
   }
-  private buildClienteForm(){
+  private buildClienteForm() {
 
     this.clienteForm = this.formBuilder.group({
       name: [null],
       job: [null],
-    
+
     });
   }
 
-  private loadCliente(){
 
 
-      this.route.paramMap.pipe(
-        switchMap(params => this.clienteService.getById(+params.get("id")))
-      )
-      .subscribe(
-        (cliente) => {
-          this.cliente = cliente;
-          this.clienteForm.patchValue(cliente) // binds loaded contato data to ContatoForm
-        
-        },
-        error => alert('Ocorreu um erro no servidor, tente mais tarde.')
-      )
+  private createCliente() {
 
-    
-  }
-
-  private createCliente(){
-    
     const cliente: Cliente = Object.assign(new Cliente(), this.clienteForm.value);
- 
+
     this.clienteService.create(cliente)
       .subscribe(
         cliente => alert("Cliente cadastrado com sucesso"),
         error => alert("Erro ao cadastrar cliente")
       )
-    
+
   }
 
 
