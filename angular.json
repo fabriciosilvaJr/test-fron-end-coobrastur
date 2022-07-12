@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "test-fron-end-coobrastur"
+    }
+  },
+  "defaultProject": "test-fron-end-coobrastur",
+  "cli": {
+    "analytics": "9083587c-4908-41c9-9f3f-c28aeba0d1ff"
+  }
 }
